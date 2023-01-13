@@ -39,15 +39,30 @@
     <div id="skills" class="fullscreen">
         <div class="container">
             <h1>Skills</h1>
-            <ul>
-                <li>
-                    <b>Language</b>: Vietnamese, English.
+            <ul id="skills-list">
+                <li class="skill-item">
+                    <h2>Language</h2>
+                    <ul>
+                        <li>Vietnamese</li>
+                        <li>English</li>
+                    </ul>
                 </li>
-                <li>
-                    <b>Computer</b>: Word, Excel, PowerPoint.
+                <li class="skill-item">
+                    <h2>Computer</h2>
+                    <ul>
+                        <li>Word</li>
+                        <li>Excel</li>
+                        <li>PowerPoint</li>
+                    </ul>
                 </li>
-                <li>
-                    <b>Programming languages</b>: Python, Java, Javascript, PHP.
+                <li class="skill-item">
+                    <h2>Programming languages</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>Javascript</li>
+                        <li>PHP</li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -56,24 +71,32 @@
     <div id="edu" class="fullscreen">
         <div class="container">
             <h1>Education</h1>
-            <ul>
-                <li>
-                    <b>Primary level</b> at <b>Thanh Lam A primary school</b>,
-                    Sep 2007 - Jun 2012.
-                </li>
-                <li>
-                    <b>Junior level</b> at <b>Trung Vuong junior high school</b>,
-                    Sep 2012 - Jun 2016.
-                </li>
-                <li>
-                    <b>High level</b> at <b>Ben Tre high school</b>,
-                    Sep 2016 - Jun 2019.
-                </li>
-                <li>
-                    <b>Information Technology</b> at <b>Hanoi University</b>,
-                    Sep 2019 - Now.
-                </li>
-            </ul>
+            <div class="timeline">
+                <div class="tl-container tl-left">
+                    <div class="tl-content">
+                        <h3>Sep 2007 - Jun 2012</h3>
+                        <b>Primary level</b> at <b>Thanh Lam A primary school</b>
+                    </div>
+                </div>
+                <div class="tl-container tl-right">
+                    <div class="tl-content">
+                        <h3>Sep 2012 - Jun 2016</h3>
+                        <b>Junior level</b> at <b>Trung Vuong junior high school</b>
+                    </div>
+                </div>
+                <div class="tl-container tl-left">
+                    <div class="tl-content">
+                        <h3>Sep 2016 - Jun 2019</h3>
+                        <b>High level</b> at <b>Ben Tre high school</b>
+                    </div>
+                </div>
+                <div class="tl-container tl-right">
+                    <div class="tl-content">
+                        <h3>Sep 2019 - Now</h3>
+                        <b>Information Technology</b> at <b>Hanoi University</b>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -99,12 +122,14 @@
     <div id="acts" class="fullscreen">
         <div class="container">
             <h1>Activities</h1>
-            <ul>
-                <li>
-                    <b>Management Supporter</b> at <b>Karatedo HANU Club</b>,
-                    Sep 2022 - Now.
-                </li>
-            </ul>
+            <div class="timeline">
+                <div class="tl-container tl-left">
+                    <div class="tl-content">
+                        <h3>Sep 2022 - Now</h3>
+                        <b>Management Supporter</b> at <b>Karatedo HANU Club</b>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -117,12 +142,14 @@
     <div id="hos-aws" class="fullscreen">
         <div class="container">
             <h1>Honors & Awards</h1>
-            <ul>
-                <li>
-                    <b>The second prize</b> in <b>Informatics </b> from <b>Vinh Phuc
-                    province</b>, 2017.
-                </li>
-            </ul>
+            <div class="timeline">
+                <div class="tl-container tl-left">
+                    <div class="tl-content">
+                        <h3>2017</h3>
+                        <b>The second prize</b> in <b>Informatics </b> from <b>Vinh Phuc</b>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -140,6 +167,24 @@
     <div id="contact" class="fullscreen">
         <div class="container">
             <h1>Contact</h1>
+            <div class="f-container">
+                <form action="mailto:xoaic@xcc.one" method="post" enctype="text/plain">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="phone">Phone Number</label>
+                    <input type="email" id="phone" name="phone" placeholder="example@domain.com">
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">
+
+                </form>
+            </div>
         </div>
     </div>
 
@@ -188,6 +233,10 @@
                 </a>
             </li>
         </ul>
+    </div>
+
+    <div>
+        <p>Copyright @2023 by Xoai CC</p>
     </div>
     <script src="script.js"></script>
 </body>
