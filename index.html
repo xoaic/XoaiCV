@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>XoaiCV 1.0</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="intro" class="fullscreen">
+    <section id="intro" class="fullscreen">
         <div class="container summary">
             <h1 class="no-decor">Xoai CC</h1>
             <h1 class="hidden">Vuong Do</h1>
@@ -14,13 +16,25 @@
             <p>Hi, I am a Fresher with 1 years of experience in Information Technology.
                 I am skilled in Web development and have a passion for Web developer.
                 Contact me at xoaic@xcc.one or visit my website at XoaiCV.</p>
+            <span id="social-net">
+                Connect to me
+                <a>
+                    <i class="fi fi-brands-facebook" style="color: dodgerblue"></i>
+                </a>
+                <a>
+                    <i class="fi fi-brands-telegram" style="color: deepskyblue"></i>
+                </a>
+                <a>
+                    <i class="fi fi-brands-discord" style="color: blueviolet"></i>
+                </a>
+            </span>
         </div>
         <div id="avatar">
             <img src="images/avatar.jpg" alt="avatar">
         </div>
-    </div>
+    </section>
 
-    <div id="obj" class="fullscreen">
+    <section id="obj" class="fullscreen">
         <div class="container summary">
             <h1>Objective</h1>
             <p>I am constantly looking forward to developing both knowledge, experience,
@@ -28,15 +42,15 @@
                 development. If you can show me how interesting your home is, how great
                 your ideal is, I will show you how my contribution is!</p>
         </div>
-    </div>
+    </section>
 
-    <div id="exp" class="fullscreen">
+    <section id="exp" class="fullscreen">
         <div class="container">
             <h1>Experience</h1>
         </div>
-    </div>
+    </section>
 
-    <div id="skills" class="fullscreen">
+    <section id="skills" class="fullscreen">
         <div class="container">
             <h1>Skills</h1>
             <ul id="skills-list">
@@ -66,9 +80,9 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <div id="edu" class="fullscreen">
+    <section id="edu" class="fullscreen">
         <div class="container">
             <h1>Education</h1>
             <div class="timeline">
@@ -98,9 +112,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="works" class="fullscreen">
+    <section id="works" class="fullscreen">
         <div class="container">
             <h1>Works</h1>
             <h2>Group projects</h2>
@@ -117,9 +131,9 @@
 
             <h3>Personal projects</h3>
         </div>
-    </div>
+    </section>
 
-    <div id="acts" class="fullscreen">
+    <section id="acts" class="fullscreen">
         <div class="container">
             <h1>Activities</h1>
             <div class="timeline">
@@ -131,15 +145,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="cert" class="fullscreen">
+    <section id="cert" class="fullscreen">
         <div class="container">
             <h1>Certification</h1>
         </div>
-    </div>
+    </section>
 
-    <div id="hos-aws" class="fullscreen">
+    <section id="hos-aws" class="fullscreen">
         <div class="container">
             <h1>Honors & Awards</h1>
             <div class="timeline">
@@ -151,9 +165,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="interests" class="fullscreen">
+    <section id="interests" class="fullscreen">
         <div class="container">
             <div class="summary">
             <h1>Interests</h1>
@@ -162,80 +176,43 @@
                 watching,...</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="contact" class="fullscreen">
+    <section id="contact" class="fullscreen">
         <div class="container">
             <h1>Contact</h1>
-            <div class="f-container">
-                <form action="mailto:xoaic@xcc.one" method="post" enctype="text/plain">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
-
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                    <label for="phone">Phone Number</label>
-                    <input type="email" id="phone" name="phone" placeholder="example@domain.com">
-
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                    <input type="submit" value="Submit">
-
-                </form>
-            </div>
+            <ul id="contact-list">
+                <li>
+                    <i class="fi fi-rr-marker"></i>
+                    <p>Thanh Lam, Me Linh, Ha Noi</p>
+                    <button>View map</button>
+                </li>
+                <li>
+                    <i class="fi fi-rr-phone-call"></i>
+                    <p>0383398867</p>
+                    <button>Call now</button>
+                </li>
+                <li>
+                    <i class="fi fi-rr-envelope-plus"></i>
+                    <p>xoaic@xcc.one</p>
+                    <button>Send email</button>
+                </li>
+            </ul>
         </div>
-    </div>
+    </section>
 
-    <div id="nav">
-        <ul>
-            <li class="active">
-                <a href="#intro">
-                    <span class="icon"><ion-icon name="arrow-up-circle-outline"></ion-icon></span>
-                    <span class="text">Top</span>
-                </a>
-            </li>
-            <li>
-                <a href="#skills">
-                    <span class="icon"><ion-icon name="construct-outline"></ion-icon></span>
-                    <span class="text">Skills</span>
-                </a>
-            </li>
-            <li>
-                <a href="#edu">
-                    <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
-                    <span class="text">Education</span>
-                </a>
-            </li>
-            <li>
-                <a href="#acts">
-                    <span class="icon"><ion-icon name="football-outline"></ion-icon></span>
-                    <span class="text">Activities</span>
-                </a>
-            </li>
-            <li>
-                <a href="#exp">
-                    <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
-                    <span class="text">Experience</span>
-                </a>
-            </li>
-            <li>
-                <a href="#works">
-                    <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
-                    <span class="text">Works</span>
-                </a>
-            </li>
-            <li>
-                <a href="#contact">
-                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
-                    <span class="text">Contact</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+<!--    <div id="nav">-->
+<!--        <ul>-->
+<!--            <li class="active">-->
+<!--                <a href="#intro">-->
+<!--                    <span class="icon"><ion-icon name="arrow-up-circle-outline"></ion-icon></span>-->
+<!--                    <span class="text">Top</span>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
 
-    <div>
+    <div id="copyright">
         <p>Copyright @2023 by Xoai CC</p>
     </div>
     <script src="script.js"></script>
