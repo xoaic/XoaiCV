@@ -10,9 +10,9 @@
 <body>
     <section id="intro" class="fullscreen">
         <div class="container summary">
-            <h1 class="no-decor">Xoai CC</h1>
-            <h1 class="hidden">Vuong Do</h1>
-            <h3>Web Developer</h3>
+            <h1 id="nickname" class="no-decor">Xoai CC</h1>
+            <h1 id="name" class="hidden no-decor">Vuong Do</h1>
+            <h2>Web Developer</h2>
             <p>Hi, I am a Fresher with 1 years of experience in Information Technology.
                 I am skilled in Web development and have a passion for Web developer.
                 Contact me at xoaic@xcc.one or visit my website at XoaiCV.</p>
@@ -36,7 +36,7 @@
 
     <section id="obj" class="fullscreen">
         <div class="container summary">
-            <h1>Objective</h1>
+            <h1 class="typed-text">Objective</h1>
             <p>I am constantly looking forward to developing both knowledge, experience,
                 and thinking to share the better things, to contribute to general
                 development. If you can show me how interesting your home is, how great
@@ -117,19 +117,27 @@
     <section id="works" class="fullscreen">
         <div class="container">
             <h1>Works</h1>
-            <h2>Group projects</h2>
-            <h3>Cloud Store website</h3>
-            <ul>
-                <li>
-                    This is a group project of my SE2 subject with my team at the university.
-                    Its content is a simple e-commerce website. Here is project link.
-                </li>
-                <li>
-                    My position is a FE member, an event organizer.
-                </li>
-            </ul>
+            <div class="tab-bar">
+                <button class="bar-btn bar-btn-active" onclick="viewTab('group-proj')">Group projects</button>
+                <button class="bar-btn" onclick="viewTab('per-proj')">Personal projects</button>
+            </div>
 
-            <h3>Personal projects</h3>
+            <div id="group-proj" class="proj-type tab-content">
+                <ul>
+                    <li>
+                        <h3>Cloud Store website</h3>
+                        <p>- This is a group project of my SE2 subject with my team at the university.
+                            Its content is a simple e-commerce website. Here is project link.<br />
+                            - My position is a FE member, an event organizer.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="per-proj" class="proj-type tab-content hidden">
+                <ul>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -185,17 +193,17 @@
                 <li>
                     <i class="fi fi-rr-marker"></i>
                     <p>Thanh Lam, Me Linh, Ha Noi</p>
-                    <button>View map</button>
+                    <button><a href="https://goo.gl/maps/afQrs2tE8B4Vd65V7">View map</a></button>
                 </li>
                 <li>
                     <i class="fi fi-rr-phone-call"></i>
                     <p>0383398867</p>
-                    <button>Call now</button>
+                    <button><a href="tel:+84383398867">Call now</a></button>
                 </li>
                 <li>
                     <i class="fi fi-rr-envelope-plus"></i>
                     <p>xoaic@xcc.one</p>
-                    <button>Send email</button>
+                    <button><a href="mailto:someone@example.com">Send email</a></button>
                 </li>
             </ul>
         </div>
@@ -213,8 +221,9 @@
 <!--    </div>-->
 
     <div id="copyright">
-        <p>Copyright @2023 by Xoai CC</p>
+        Copyright @2023 by Xoai CC
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="script.js"></script>
 </body>
 </html>
