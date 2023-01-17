@@ -9,25 +9,25 @@
 </head>
 <body>
     <section id="intro" class="fullscreen">
-        <div class="container summary">
+        <div id="info" class="container summary">
             <h1 id="nickname" class="no-decor">Xoai CC</h1>
             <h1 id="name" class="hidden no-decor">Vuong Do</h1>
             <h2>Web Developer</h2>
             <p>Hi, I am a Fresher with 1 years of experience in Information Technology.
                 I am skilled in Web development and have a passion for Web developer.
                 Contact me at xoaic@xcc.one or visit my website at XoaiCV.</p>
-            <span id="social-net">
-                Connect to me
-                <a>
+            <div id="social-net">
+                <p>Connect to me</p>
+                <a href="https://www.facebook.com/vuong.xoaic">
                     <i class="fi fi-brands-facebook" style="color: dodgerblue"></i>
                 </a>
-                <a>
+                <a href="https://t.me/xoaicc">
                     <i class="fi fi-brands-telegram" style="color: deepskyblue"></i>
                 </a>
-                <a>
+                <a href="https://discord.com/users/884003360645189642">
                     <i class="fi fi-brands-discord" style="color: blueviolet"></i>
                 </a>
-            </span>
+            </div>
         </div>
         <div id="avatar">
             <img src="images/avatar.jpg" alt="avatar">
@@ -118,24 +118,41 @@
         <div class="container">
             <h1>Works</h1>
             <div class="tab-bar">
-                <button class="bar-btn bar-btn-active" onclick="viewTab('group-proj')">Group projects</button>
-                <button class="bar-btn" onclick="viewTab('per-proj')">Personal projects</button>
+                <a class="bar-btn bar-btn-active" onclick="viewTab('group-proj')">Group projects</a>
+                <a class="bar-btn" onclick="viewTab('per-proj')">Personal projects</a>
             </div>
 
             <div id="group-proj" class="proj-type tab-content">
                 <ul>
                     <li>
-                        <h3>Cloud Store website</h3>
-                        <p>- This is a group project of my SE2 subject with my team at the university.
-                            Its content is a simple e-commerce website. Here is project link.<br />
-                            - My position is a FE member, an event organizer.
+                        <h2>Cloud Store website</h2>
+                        <p>- This is a group project of SE2 subject with my team at the university.
+                            Its content is a simple e-commerce website.<br />
+                            - My position is a FE member, an event organizer.<br />
+                            - This project uses Springboot framework for back-end.
                         </p>
+                        <div class="view-proj">
+                            <a href="https://github.com/HaDucTam/SE2Project"><button>Source code</button></a>
+                            <a href="https://" class="hidden"><button>View demo</button></a>
+                        </div>
                     </li>
                 </ul>
             </div>
 
             <div id="per-proj" class="proj-type tab-content hidden">
                 <ul>
+                    <li>
+                        <h2>XoaiCV</h2>
+                        <p>- This is a personal project for showing my project to public.
+                            I develop this project by myself with supporting by AI.<br />
+                            - This project just contains simple html, css, and javascript
+                            to display website.
+                        </p>
+                        <div class="view-proj">
+                            <a href="https://github.com/xoaic/XoaiCV"><button>Source code</button></a>
+                            <a href="/"><button>View demo</button></a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -209,21 +226,80 @@
         </div>
     </section>
 
-<!--    <div id="nav">-->
-<!--        <ul>-->
-<!--            <li class="active">-->
-<!--                <a href="#intro">-->
-<!--                    <span class="icon"><ion-icon name="arrow-up-circle-outline"></ion-icon></span>-->
-<!--                    <span class="text">Top</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </div>-->
+    <div id="nav">
+        <ul>
+            <li class="nav-item">
+                <a href="#intro">
+                    <span class="icon"><i class="fi fi-rr-comment-info"></i></span>
+                    <span class="text">Intro</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#obj">
+                    <span class="icon"><i class="fi fi-rr-interactive"></i></span>
+                    <span class="text">Objective</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#exp">
+                    <span class="icon"><i class="fi fi-rr-briefcase"></i></span>
+                    <span class="text">Experience</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills">
+                    <span class="icon"><i class="fi fi-rr-people-poll"></i></span>
+                    <span class="text">Skills</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#edu">
+                    <span class="icon"><i class="fi fi-rr-graduation-cap"></i></span>
+                    <span class="text">Education</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#works">
+                    <span class="icon"><i class="fi fi-rr-box-open"></i></span>
+                    <span class="text">Works</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#acts">
+                    <span class="icon"><i class="fi fi-rr-flame"></i></span>
+                    <span class="text">Activities</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#cert">
+                    <span class="icon"><i class="fi fi-rr-diploma"></i></span>
+                    <span class="text">Certification</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#hos-aws">
+                    <span class="icon"><i class="fi fi-rr-trophy"></i></span>
+                    <span class="text">Honors & Awards</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#interests">
+                    <span class="icon"><i class="fi fi-rr-circle-heart"></i></span>
+                    <span class="text">Interests</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact">
+                    <span class="icon"><i class="fi fi-rr-handshake"></i></span>
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <div id="copyright">
         Copyright @2023 by Xoai CC
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="script.js"></script>
 </body>
 </html>
