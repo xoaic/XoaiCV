@@ -124,6 +124,14 @@ p:hover, i:hover {
     transition-duration: 0.3s;
 }
 
+section {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
 ul {
     list-style: none;
 }
@@ -136,13 +144,6 @@ ul {
 
 .hidden {
     display: none;
-}
-
-.fullscreen {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
 }
 
 .no-decor {
@@ -292,6 +293,7 @@ ul {
 
 #intro::after {
     background: url("/images/shizuka2.png") no-repeat;
+    background-size: contain;
     bottom: 0;
     content: "";
     height: 65%;
@@ -374,7 +376,7 @@ ul {
 
 #skills .container #skills-list .skill-item {
     text-align: center;
-    width: 25vw;
+    width: 33%;
 }
 
 #skills .container #skills-list .skill-item ul {
@@ -500,13 +502,18 @@ ul {
     bottom: 3.5%;
     position: fixed;
     text-align: center;
-    width: 100%;
     z-index: 2;
+    width: 100vw;
 }
 
 #nav ul {
     display: flex;
     justify-content: center;
+    overflow-x: scroll;
+}
+
+#nav ul::-webkit-scrollbar {
+    display: none;
 }
 
 #nav ul .nav-item {
@@ -541,6 +548,51 @@ ul {
     font-size: var(--s-small);
     position: fixed;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     z-index: 2;
+}
+
+@media only screen and (max-width: 900px) {
+    .tab-content li {
+        width: 46.5%;
+    }
+
+    #intro::after {
+        height: 50%;
+        width: 20%;
+        left: 0;
+    }
+
+    #nav ul {
+        justify-content: normal;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tab-content li {
+        width: 96%;
+    }
+
+    #intro div {
+        padding: 5%;
+        width: 100%;
+    }
+
+    #skills .container #skills-list {
+        flex-direction: column;
+    }
+
+    #skills .container #skills-list .skill-item {
+        width: 100%;
+    }
+
+    #contact #contact-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact #contact-list li {
+        width: 80%;
+        justify-content: center;
+    }
 }
