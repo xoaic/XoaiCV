@@ -45,6 +45,7 @@ html {
     font-weight: var(--w-normal);
     margin: 0;
     padding: 0;
+    z-index: 2;
 }
 
 body {
@@ -137,7 +138,7 @@ ul {
 }
 
 .container {
-    max-height: 90%;
+    max-height: 75%;
     min-height: 60%;
     width: 90%;
 }
@@ -172,7 +173,7 @@ ul {
     border-radius: var(--b-radius);
     padding: 2%;
     transition-duration: 0.3s;
-    width: 24%;
+    width: 22%;
 }
 
 .tab-content li:hover {
@@ -204,10 +205,6 @@ ul {
     padding: 5px 40px;
     position: relative;
     width: 40%;
-}
-
-.tl-left {
-    left: 2%;
 }
 
 .tl-left::before {
@@ -303,25 +300,20 @@ ul {
     z-index: 1;
 }
 
-#intro div {
+#intro #hero {
+    display: flex;
+}
+
+#intro #hero #info, #avatar {
     padding: 5%;
     width: 50%;
 }
 
-#intro .container #info {
-    align-items: center;
-    display: flex;
-}
-
-#intro .container p {
+#intro #hero #info p {
     margin-bottom: 20px;
 }
 
-#intro .container #social-net {
-    width: 90%;
-}
-
-#intro .container #social-net a {
+#intro #hero #info #social-net a {
     background-color: var(--c-box-back);
     border-radius: var(--b-radius);
     cursor: pointer;
@@ -334,24 +326,25 @@ ul {
     margin: 0 5px;
 }
 
-#intro .container #social-net a:hover {
+#intro #hero #info #social-net a:hover {
     box-shadow: var(--b-shadow);
     transform: scale(1.05);
     transition-duration: 0.3s;
 }
 
-#intro #avatar {
+#intro #hero #avatar {
+    align-items: center;
     display: flex;
     justify-content: center;
 }
 
-#intro #avatar img {
+#intro #hero #avatar img {
     border-radius: var(--b-radius);
     transition-duration: 0.3s;
     width: 50%;
 }
 
-#intro #avatar img:hover {
+#intro #hero #avatar img:hover {
     box-shadow: var(--b-shadow);
     transform: scale(1.05);
     transition-duration: 0.3s;
@@ -466,8 +459,9 @@ ul {
     background-color: var(--c-back1);
 }
 
-#contact #contact-list {
+#contact #contact-list ul {
     display: flex;
+    height: 30vh;
     justify-content: center;
 }
 
@@ -476,12 +470,11 @@ ul {
     border-radius: var(--b-radius);
     display: flex;
     flex-direction: column;
-    height: 20vh;
     margin: 10px;
     padding: 10px 20px;
     text-align: center;
     transition-duration: 0.3s;
-    width: 15vw;
+    width: 33%;
 }
 
 #contact #contact-list li:hover {
@@ -502,14 +495,15 @@ ul {
     bottom: 3.5%;
     position: fixed;
     text-align: center;
-    z-index: 2;
     width: 100vw;
+    z-index: 3;
 }
 
 #nav ul {
     display: flex;
     justify-content: center;
     overflow-x: scroll;
+    overflow-y: unset;
 }
 
 #nav ul::-webkit-scrollbar {
@@ -549,18 +543,46 @@ ul {
     position: fixed;
     text-align: center;
     width: 100vw;
-    z-index: 2;
+    z-index: 3;
 }
 
 @media only screen and (max-width: 900px) {
+    .tl-container {
+        width: 70%;
+    }
+
+    .tl-right {
+        left: 20%;
+    }
+
+    .tab-content {
+        overflow-x: scroll;
+    }
+
+    .tab-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-content ul {
+        width: 200%;
+    }
+
     .tab-content li {
-        width: 46.5%;
+        width: 21%;
+    }
+
+    .timeline::after {
+        display: none;
     }
 
     #intro::after {
         height: 50%;
-        width: 20%;
         left: 0;
+        width: 20%;
+    }
+
+    #intro #hero #avatar img {
+        width: 75%;
     }
 
     #nav ul {
@@ -569,13 +591,36 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
-    .tab-content li {
-        width: 96%;
+    .timeline::-webkit-scrollbar {
+        display: none;
     }
 
-    #intro div {
-        padding: 5%;
-        width: 100%;
+    .tab-content {
+        margin-top: 6%;
+    }
+
+    .tab-content li {
+        width: 33%;
+    }
+
+    #intro::after {
+        height: 55%;
+    }
+
+    #intro .container {
+        overflow-x: scroll;
+    }
+
+    #intro .container::-webkit-scrollbar {
+        display: none;
+    }
+
+    #intro #hero {
+        width: 200%;
+    }
+
+    #intro #hero #avatar img {
+        width: 80%;
     }
 
     #skills .container #skills-list {
@@ -583,16 +628,24 @@ ul {
     }
 
     #skills .container #skills-list .skill-item {
+        margin-top: 3%;
         width: 100%;
     }
 
     #contact #contact-list {
-        flex-direction: column;
-        align-items: center;
+        overflow-x: scroll;
+    }
+
+    #contact #contact-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    #contact #contact-list ul {
+        width: 200%;
     }
 
     #contact #contact-list li {
-        width: 80%;
         justify-content: center;
+        width: 33%;
     }
 }
