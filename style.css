@@ -51,6 +51,7 @@ html {
 body {
     color: var(--c-basic1);
     cursor: default;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -173,7 +174,7 @@ ul {
     border-radius: var(--b-radius);
     padding: 2%;
     transition-duration: 0.3s;
-    width: 22%;
+    width: 21%;
 }
 
 .tab-content li:hover {
@@ -289,7 +290,7 @@ ul {
 }
 
 #intro::after {
-    background: url("/images/shizuka2.png") no-repeat;
+    background: url("/images/its-shizuka.png") no-repeat;
     background-size: contain;
     bottom: 0;
     content: "";
@@ -423,6 +424,14 @@ ul {
 #works .container .tab-bar .bar-btn-active {
     background-color: var(--c-box-back);
     color: var(--c-basic5);
+}
+
+#works .container .tab-content ul {
+    display: flex;
+}
+
+#works .container .tab-content ul li {
+    margin-right: 5px;
 }
 
 #works .container .tab-content ul li .view-proj {
